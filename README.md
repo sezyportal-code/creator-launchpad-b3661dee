@@ -1,73 +1,99 @@
-# Welcome to your Lovable project
+# StoreFront - E-Commerce Landing Page Template
 
-## Project info
+A high-converting, frontend-only e-commerce landing page template built with React + Vite. Perfect for Gumroad, indie products, or any simple storefront.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Features
 
-## How can I edit this code?
+- **Hero Section** - Eye-catching product showcase with primary CTA
+- **Product Grid** - Responsive grid displaying featured products
+- **Product Modal** - Detailed product view with add-to-cart
+- **Cart UI** - Slide-out cart drawer (frontend-only, demo mode)
+- **Testimonials** - Social proof section with customer reviews
+- **Multiple CTAs** - Strategically placed calls-to-action
+- **Trust Features** - Shipping, returns, and security badges
+- **Responsive Design** - Mobile-first, works on all devices
+- **Subtle Animations** - Hover effects and smooth transitions
 
-There are several ways of editing your application.
+## Tech Stack
 
-**Use Lovable**
+- **React 18** - Modern React with hooks
+- **Vite** - Fast build tool and dev server
+- **TypeScript** - Type-safe development
+- **Tailwind CSS** - Utility-first styling
+- **Radix UI** - Accessible component primitives
+- **Lucide React** - Beautiful icon library
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## Project Structure
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+src/
+├── assets/           # Product images and hero background
+├── components/       # React components
+│   ├── ui/          # Shadcn UI components
+│   ├── Header.tsx   # Navigation header
+│   ├── Hero.tsx     # Hero section
+│   ├── ProductCard.tsx
+│   ├── ProductGrid.tsx
+│   ├── ProductModal.tsx
+│   ├── Cart.tsx     # Cart drawer
+│   ├── Testimonials.tsx
+│   ├── CTASection.tsx
+│   ├── Features.tsx
+│   └── Footer.tsx
+├── context/         # React context (CartContext)
+├── data/            # Sample product data
+├── types/           # TypeScript types
+├── hooks/           # Custom hooks
+├── lib/             # Utility functions
+└── pages/           # Page components
 ```
 
-**Edit a file directly in GitHub**
+## Getting Started
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+1. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-**Use GitHub Codespaces**
+2. **Start development server**
+   ```bash
+   npm run dev
+   ```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+3. **Build for production**
+   ```bash
+   npm run build
+   ```
 
-## What technologies are used for this project?
+## Customization
 
-This project is built with:
+### Products
+Edit `src/data/products.ts` to add your own products.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Colors
+Edit `src/index.css` to customize the color palette.
 
-## How can I deploy this project?
+### Content
+- Update hero text in `src/components/Hero.tsx`
+- Modify testimonials in `src/data/products.ts`
+- Change footer links in `src/components/Footer.tsx`
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+## Deployment
 
-## Can I connect a custom domain to my Lovable project?
+### Netlify
+1. Push your code to GitHub
+2. Connect your repo to Netlify
+3. Build command: `npm run build`
+4. Publish directory: `dist`
 
-Yes, you can!
+## Adding Payments
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+This is a frontend-only template. To add real payments:
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+1. **Gumroad** - Use Gumroad's embed or overlay checkout
+2. **Stripe** - Add Stripe Checkout or Elements
+3. **Shopify** - Use Shopify Buy Button
+
+---
+
+Built with Lovable for indie founders and creators.
